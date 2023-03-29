@@ -32,9 +32,9 @@ class Clock {
       this.render();
       this.timer = setInterval(() => this.render(), 1000);
     }
-  }
+}
 
-  class ExtendedClock extends Clock{
+class ExtendedClock extends Clock{
     constructor({template, precision=1000}){
         super({template: template});
         this.precision = precision;
@@ -45,15 +45,17 @@ class Clock {
     }
   }
 
-  /*let lowResolutionClock = new ExtendedClock({
+/*
+let lowResolutionClock = new ExtendedClock({
     template: 'h:m:s',
     precision: 10000
-  });*/
+});
+*/
 
 let lowResolutionClock = new ExtendedClock({
     template: 'h:m:s'
-  });
-  
+});
+
 lowResolutionClock.start();
 
 //标准答案
